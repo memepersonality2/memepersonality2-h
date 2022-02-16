@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained by Gregor Santner, 2016-
+ *   https://gsantner.net/
+ *
+ *   License of this file: GNU GPLv3 (Commercial upon request)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+#########################################################*/
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_appearance"
+        android:icon="@drawable/ic_color_lens_white_48dp"
+        android:title="@string/appearance"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_white_48px"
+        android:title="@string/share_meme__appspecific"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_save_white_48px"
+        android:title="@string/save_meme__appspecific"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_show_original_image"
+        android:icon="@drawable/ic_image_black_24dp"
+        android:title="@string/show_image"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_show_edited_image"
+        android:icon="@drawable/ic_image_black_24dp"
+        android:title="@string/show_edited_image"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_save_as_template"
+        android:icon="@drawable/ic_save_white_48px"
+        android:title="@string/save_as_template"
+        app:showAsAction="never" />
+</menu>

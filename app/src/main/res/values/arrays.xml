@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained by Gregor Santner, 2016-
+ *   https://gsantner.net/
+ *
+ *   License of this file: GNU GPLv3 (Commercial upon request)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+#########################################################*/
+-->
+<resources>
+    <string-array name="meme_tags__titles" translatable="false">
+        <item>@string/all</item>
+        <item>@string/rage</item>
+        <item>@string/humans</item>
+        <item>@string/animals</item>
+        <item>@string/cartoon</item>
+        <item>@string/other</item>
+    </string-array>
+
+    <string-array name="meme_tags__keys" translatable="false">
+        <item>all</item>
+        <item>rage</item>
+        <item>humans</item>
+        <item>animals</item>
+        <item>cartoon</item>
+        <item>other</item>
+    </string-array>
+
+    <string-array name="memelist_data_mode" translatable="false">
+        <item>@string/create</item>
+        <item>@string/favs</item>
+        <item>@string/saved</item>
+    </string-array>
+
+    <string-array name="memelist_view_mode" translatable="false">
+        <item>@string/picture_grid</item>
+        <item>@string/rows_with_title</item>
+    </string-array>
+
+    <!-- Stuff without a direct connection -->
+    <string-array name="values__zero_to_one" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <string-array name="values__zero_to_two" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained by Gregor Santner, 2016-
+ *   https://gsantner.net/
+ *
+ *   License of this file: GNU GPLv3 (Commercial upon request)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+#########################################################*/
+-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:fadeScrollbars="false"
+    android:paddingLeft="@dimen/default_margin_2"
+    android:paddingTop="@dimen/default_margin_2"
+    android:paddingRight="@dimen/default_margin_2"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="net.gsantner.memetastic.activity.MemeCreateActivity">
+
+    <LinearLayout
+        android:id="@+id/memecreate__moar_controls__layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:orientation="vertical"
+        android:paddingBottom="72dp">
+
+        <!--   #################################  -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_2"
+            android:text="@string/picture"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_1">
+
+            <Button
+                android:id="@+id/memecreate__moar_controls__rotate_plus_90deg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="@string/rotate"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/primary_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/padding_color_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_1"
+            android:gravity="center_vertical"
+            android:weightSum="100">
+
+            <TextView
+                style="@style/AppTheme.MemeCreatorCaptionText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="@string/padding" />
+
+            <SeekBar
+                android:id="@+id/memecreate__moar_controls__seek_padding_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="55"
+                android:max="150"
+                android:progress="18" />
+
+            <com.jaredrummler.android.colorpicker.ColorPanelView
+                android:id="@+id/memecreate__moar_controls__color_picker_for_padding"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="15"
+                android:minHeight="20dp" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/memecreate__moar_controls__global_text_settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/global_text_settings" />
+
+    </LinearLayout>
+</ScrollView>

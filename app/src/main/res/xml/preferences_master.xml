@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/*#######################################################
+ *
+ *   Maintained by Gregor Santner, 2016-
+ *   https://gsantner.net/
+ *
+ *   License of this file: GNU GPLv3 (Commercial upon request)
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+#########################################################*/
+--><!--suppress AndroidElementNotAllowed -->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/settings">
+    
+    
+    <PreferenceScreen android:icon="@drawable/ic_grid_on_black_24dp" android:title="@string/overview" android:summary="@string/main_view">
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/memelist_view_mode"
+            android:entryValues="@array/values__zero_to_one"
+            android:icon="@drawable/ic_grid_on_black_24dp"
+            android:key="@string/pref_key__memelist_view_type"
+            android:summary="@string/view_type_memelist__appspecific"
+            android:title="@string/view_type" />
+
+        <android.support.v7.preference.SeekBarPreference
+            android:defaultValue="3"
+            android:icon="@drawable/ic_grid_on_black_24dp"
+            android:key="@string/pref_key__grid_column_count_portrait"
+            android:max="15"
+            android:title="@string/columns_portrait"
+            app:min="2" />
+
+        <android.support.v7.preference.SeekBarPreference
+            android:defaultValue="3"
+            android:icon="@drawable/ic_grid_on_black_24dp"
+            android:key="@string/pref_key__grid_column_count_landscape"
+            android:max="20"
+            android:title="@string/columns_landscape"
+            app:min="2" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:entries="@array/memelist_data_mode"
+            android:entryValues="@array/values__zero_to_two"
+            android:icon="@drawable/ic_subdirectory_arrow_right_black_24dp"
+            android:key="@string/pref_key__default_main_mode"
+            android:summary="@string/default_mode_description_description__appspecific"
+            android:title="@string/default_mode" />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_autorenew_black_24dp"
+            android:key="@string/pref_key__is_shuffle_meme_tags"
+            android:summary="@string/shuffle_meme_list_description__appspecific"
+            android:title="@string/shuffle_meme_list__appspecific" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_visibility_black_24dp"
+            android:key="@string/pref_key__is_overview_statusbar_hidden"
+            android:summary="@string/hide_statusbar_at_this_view"
+            android:title="@string/hide_statusbar" />
+
+    </PreferenceScreen>
+
+    <PreferenceScreen android:title="@string/editor" android:summary="@string/edit_picture" android:icon="@drawable/ic_edit_black_24dp">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_save_black_24dp"
+            android:key="@string/pref_key__auto_save_meme"
+            android:summary="@string/save_when_pressing_back_description__appspecific"
+            android:title="@string/save_when_pressing_back" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_visibility_black_24dp"
+            android:key="@string/pref_key__is_editor_statusbar_hidden"
+            android:summary="@string/hide_statusbar_at_this_view"
+            android:title="@string/hide_statusbar" />
+
+        <android.support.v7.preference.SeekBarPreference
+            android:defaultValue="24"
+            android:icon="@drawable/ic_high_quality_black_24dp"
+            android:key="@string/pref_key__render_quality__percent"
+            android:max="100"
+            android:summary="@string/picture_quality_percent"
+            android:title="@string/render_quality"
+            app:min="1" />
+    </PreferenceScreen>
+
+
+    <PreferenceScreen android:title="@string/picture_viewer" android:icon="@drawable/ic_image_black_24dp" android:summary="@string/pictures_shown_in_gallery_and_this_app">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_photo_library_black_24dp"
+            android:key="@string/pref_key__is_show_in_gallery"
+            android:title="@string/show_in_device_gallery" />
+        
+        <Preference
+            android:icon="@drawable/ic_delete_sweep_black_24dp"
+            android:key="@string/pref_key__cleanup_thumbnails"
+            android:title="@string/clear_thumbnails" />
+
+    </PreferenceScreen>
+
+
+    <!-- Most important settings -->
+    <PreferenceCategory android:title="@string/general">
+        <Preference
+            android:icon="@drawable/ic_file_download_black_24dp"
+            android:key="@string/pref_key__download_assets_try"
+            android:summary="@string/download_latest_assets_message__appspecific"
+            android:title="@string/download_latest_assets" />
+
+        <net.gsantner.opoc.preference.LanguagePreferenceCompat
+            android:icon="@drawable/ic_language_black_24dp"
+            android:key="@string/pref_key__language"
+            android:summary="@string/language_change_restart_description"
+            android:title="@string/language" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
